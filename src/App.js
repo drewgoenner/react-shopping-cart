@@ -19,7 +19,7 @@ function App() {
 	};
 
 	const removeItem = item => {
-		console.log('Original cart', cart);
+
 		const newCart = cart;
 		for( let i = 0; i < newCart.length; i++){
 			if (newCart[i].id === item) {
