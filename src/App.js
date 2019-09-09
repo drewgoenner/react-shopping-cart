@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import data from './data';
 import { ProductContext } from './contexts/ProductContext';
 import { CartContext } from './contexts/CartContext';
-import { CartItemContext } from './contexts/CartItemContext';
+
 
 // Components
 import Navigation from './components/Navigation';
@@ -35,15 +35,12 @@ function App() {
 			<CartContext.Provider value = {{cart, removeItem}}>
 				<div className="App">
 					<Navigation cart={cart} />
-
-						{/* Routes */}
-					
+						{/* Routes */}				
 					<Route
 						exact
 						path="/"
 						component = {Products} 
 					/>
-
 					<Route
 						path="/cart"
 						render={() => <ShoppingCart cart={cart} />}
